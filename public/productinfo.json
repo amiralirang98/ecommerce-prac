@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"product1",
+        "image_url":"/product_images/product1.jpg",
+        "price":100
+    },
+    {
+        "id":2,
+        "name":"product 2",
+        "image_url":"/product_images/product2.jpg",
+        "price":200
+    },
+    {
+        "id":3,
+        "name":"product 3",
+        "image_url":"/product_images/product3.jpg",
+        "price":500
+    },
+    {
+        "id":4,
+        "name":"product 4",
+        "image_url":"/product_images/product4.jpg",
+        "price":600
+    },
+    {
+        "id":5,
+        "name":"product 5",
+        "image_url":"/product_images/images5.jpg",
+        "price":800
+    }
+]
