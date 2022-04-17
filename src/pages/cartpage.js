@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import StyledCartPage from "../StyledComponents/StyledCartPage";
 const CartPage = () => {
-    var products =  useSelector((state) => state.allProducts.product)
+    //var products =  useSelector((state) => state.allProducts.product)
     console.log("from cart",products)
     var navigate = useNavigate()
     const checkOut = () => {
