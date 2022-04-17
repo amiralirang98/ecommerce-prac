@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/navbar.css"
 import { useSelector,useDispatch } from "react-redux";
-import { setCartNum } from "../redux/actions/action";
+import { setCartNum,setCart } from "../redux/actions/action";
 const Navbar = () => {
     var navigate=useNavigate()
     var dispatch = useDispatch()
-    var cart = JSON.parse(localStorage.getItem("cart"))
+    var cart = useSelector((state)=> state.allProducts.cart)
     var cartValue =  useSelector((state) => state.allProducts.cartNum)
     const logout = () => {
         
@@ -22,6 +22,7 @@ const Navbar = () => {
         localStorage.setItem("name",name)
         localStorage.setItem("email",email)
         dispatch(setCartNum(cart.length))
+        dispatch(setCart(cart))
         navigate("/")
     }
     return(

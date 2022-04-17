@@ -23,3 +23,9 @@ export const setCartNum = (cartNum) => {
         payload: cartNum
     }   
 }
+export const setCart = (cart) => {
+    return{
+        type:actionTypes.SET_CART,
+        payload:cart
+    }
+}

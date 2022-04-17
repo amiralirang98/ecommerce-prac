@@ -4,7 +4,8 @@ const initialstate = {
     counter:0,
     product:[],
     visiblity_status:[],
-    cartNum:0
+    cartNum:0,
+    cart:[]
 }
 export const productReducer = (state=initialstate,action) => {
     switch(action.type){
@@ -16,6 +17,8 @@ export const productReducer = (state=initialstate,action) => {
             return {...state,visiblity_status:action.payload}
         case actionTypes.SET_CART_NUM:
             return{...state,cartNum:action.payload}
+        case actionTypes.SET_CART:
+            return{...state,cart:action.payload}
         default:
             return state
     }
