@@ -1,12 +1,16 @@
 import React from "react";
 import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch,useSelector } from "react-redux";
+import { setCartNum } from "../redux/actions/action";
 
 import StyledProductCard from "../StyledComponents/StyledProductCard";
 const Card = (props) => {
     
     const [IsInCart,SetIsInCart] = useState(false)
     var navigate = useNavigate()
+    var dispatch =  useDispatch()
+
     const viewmore = () => {
         navigate(`/product/${props.product.id}`)
     }
@@ -26,10 +30,11 @@ const Card = (props) => {
         {
         cart.push(item)
         localStorage.setItem("cart",JSON.stringify(cart))
+        dispatch(setCartNum(cart.length))
         SetIsInCart(true)
         }
         else{
-            SetIsInCart(true)
+            //SetIsInCart(true)
             alert('item already exixt in cart')
         }
     }

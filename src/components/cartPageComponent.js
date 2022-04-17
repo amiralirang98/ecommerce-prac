@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCartNum } from "../redux/actions/action";
  const CartPageComponent = (props) => {
       var navigate = useNavigate()
+      var dispatch = useDispatch()
      const [ProductQuantity,SetProductQuantity] = useState(1)
      const incrementValue = () => {
         var cart = JSON.parse(localStorage.getItem("cart"))
@@ -21,6 +24,7 @@ import { useNavigate } from "react-router-dom";
             var cart1 = cart.filter((i) => i.id!=props.item.id)
             console.log("cat1",cart1)
             localStorage.setItem("cart",JSON.stringify(cart1))
+            dispatch(setCartNum(cart1.length))
             navigate("/cart")
         }
     }

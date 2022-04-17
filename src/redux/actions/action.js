@@ -17,3 +17,9 @@ export const setStatus = (status) => {
         payload:status
     }
 }
+export const setCartNum = (cartNum) => {
+    return{
+        type: actionTypes.SET_CART_NUM,
+        payload: cartNum
+    }   
+}
