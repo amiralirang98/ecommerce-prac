@@ -2,7 +2,7 @@ import React from "react";
 import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
-import { setCartNum } from "../redux/actions/action";
+import { setCartNum,setCart } from "../redux/actions/action";
 
 import StyledProductCard from "../StyledComponents/StyledProductCard";
 const Card = (props) => {
@@ -16,6 +16,7 @@ const Card = (props) => {
     }
     var cart1 = JSON.parse(localStorage.getItem('cart'))
     console.log('cart1',cart1)
+    var cart = /*JSON.parse(localStorage.getItem('cart'))*/ useSelector((state) => state.allProducts.cart)
     //     var alreadyExistingItem1 = cart1.filter((h) => h.id === props.product.id)
     //     if(!alreadyExistingItem1=="")
     //     {
@@ -24,13 +25,13 @@ const Card = (props) => {
     const addToCart = (item) => {
         // var cart = {e.props.product.}
         console.log(item)
-        var cart = JSON.parse(localStorage.getItem('cart'))
         var alreadyExistingItem = cart.filter((h) => h.id === item.id)
         if(alreadyExistingItem == "")
         {
         cart.push(item)
         localStorage.setItem("cart",JSON.stringify(cart))
         dispatch(setCartNum(cart.length))
+        dispatch(setCart(cart))
         SetIsInCart(true)
         }
         else{

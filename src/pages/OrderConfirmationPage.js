@@ -2,7 +2,7 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 import "../style/OrderConfirmationPage.css"
 import { useDispatch } from "react-redux"
-import { setCartNum } from "../redux/actions/action"
+import { setCartNum,setCart } from "../redux/actions/action"
 
 const OrderConfirmationPage = () => {
     var navigate = useNavigate()
@@ -15,6 +15,7 @@ const OrderConfirmationPage = () => {
         localStorage.setItem("order",JSON.stringify(ordDetails))
         localStorage.setItem("cart",JSON.stringify(cart))
         dispatch(setCartNum(cart.length))
+        dispatch(setCart(cart))
 
         navigate('/landingpage')
     }

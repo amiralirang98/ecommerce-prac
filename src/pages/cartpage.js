@@ -13,7 +13,7 @@ const CartPage = () => {
         navigate("/checkout")
     }
     const [TotalPrice,SetTotalPrice]=useState({})
-    var products = JSON.parse(localStorage.getItem('cart'))
+    var products = useSelector((state) => state.allProducts.cart)
     // useEffect(() => {
     //     const fetchcart = async() => {
              

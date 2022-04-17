@@ -2,8 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StyledLoginFile from "../StyledComponents/StyledLoginFile";
+import { useSelector,useDispatch } from "react-redux";
+
 const ChekoutPage = () => {
 var navigate = useNavigate()
+var dispatch = useDispatch()
 var initial = {
     "name":"",
     "email":"",
@@ -11,7 +14,7 @@ var initial = {
     "PhoneNum":"",
 }
 var [FormValues,SetFormValues]=useState(initial)
-var cart =  JSON.parse(localStorage.getItem('cart'))
+var cart =  useSelector((state) => state.allProducts.cart)
 var sum = 0
 for(let i=0;i<cart.length;i++){
     var a = cart[i].price*cart[i].quantity
