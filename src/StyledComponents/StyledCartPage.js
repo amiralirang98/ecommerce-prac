@@ -11,9 +11,11 @@ const StyledCartPage = styled.div`
     margin-bottom: 5%;
 }
 .cart-page-component{
+    margin-top: 2%;
     border: 1px solid black;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr))
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    background-color: #ffff;
 
 }
 .inc-dec-buttons{
@@ -62,6 +64,7 @@ const StyledCartPage = styled.div`
     margin-top: 2%;
     margin-bottom: 5%;
     border-radius: 5px;
+    background-color: #ffff
 }
 .checkout-button-container:hover{
     background-color: lightgreen;
