@@ -20,7 +20,7 @@ const StyledProductCard = styled.div`
 }
 .product-card-buttons{
     /* display: inline; */
-    /* border: 1px solid blue; */
+     /*border: 1px solid black;*/
 }
 .left-button{
     float: left;
@@ -34,6 +34,7 @@ const StyledProductCard = styled.div`
     padding: 2%;
     border-radius: 5px;
     margin-top: 5%;
+    background-color: #ffff;
 }
 .left-button:hover{
     background-color: skyblue;

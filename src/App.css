@@ -1,4 +1,4 @@
-/* .App {
+/*.App {
   text-align: center;
 }
 
@@ -39,4 +39,5 @@
 body{
   /* background-color: aqua; */
   /* margin: 2%; */
+  background-image: linear-gradient(to left,#ffff,aqua);
 }

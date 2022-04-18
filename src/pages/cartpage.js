@@ -29,7 +29,6 @@ const CartPage = () => {
         <StyledCartPage>
         < Navbar />
         <div>
-            <p>items</p>
             { products.map((p) => (
             <CartPageComponent item={p}/>
              ))}

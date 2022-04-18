@@ -8,6 +8,7 @@ const StyledProductPage =  styled.div`
     margin: 2%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    background-color: #ffff
 }
 .product-description-image{
     margin-top: 5%;
