@@ -51,6 +51,7 @@ padding-left: 7%;
         margin-top: 20%;
         margin-left: 0;
         margin-right: 0;
+        border-radius:0;
     }
    
 }
