@@ -32,7 +32,6 @@ class Adminpage2 extends Component {
                 <StyledLandingPage>
                 <div>
                 <Navbar />
-                <p>Welcome {isVisible[0].id} </p>
                 <div className="product-container">
                  { prod.map((p) => (
                 <AdminProductCard2 product={p} visible={isVisible[p.id-1].visiblity_status}/>

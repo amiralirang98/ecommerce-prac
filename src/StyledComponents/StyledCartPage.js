@@ -16,6 +16,7 @@ const StyledCartPage = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     background-color: #ffff;
+    margin-top: 7%;
 
 }
 .inc-dec-buttons{
